@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>News</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<header>
+		<img src="image/mike.png"></img>
+		<h1>The News</h1>
+	</header>
+	<div class="topnav">
+		<a href="index.html">Home</a>
+		<a>Sports</a>
+		<a>Entertainment</a>
+		<a>All Section</a>
+	</div>
+	<div class='row'>
+		<img src="image/fight.png">
+		<ul>
+			<li><b></b><a></a>
+				<p class='grey'></p>
+			</li>
+			<li><b></b><a></a>
+				<p class='grey'></p>
+			</li>
+			<li><b></b><a></a>
+				<p class='grey'></p>
+			</li>
+			<li><b></b><a></a>
+				<p class='grey'></p>
+			</li>
+		</ul>
+		<ul>
+			<li><b></b><a></a>
+				<p class='grey'></p>
+			</li>
+			<li><b></b><a></a>
+				<p class='grey'></p>
+			</li>
+			<li><b></b><a></a>
+				<p class='grey'></p>
+			</li>
+			<li><b></b><a></a>
+				<p class='grey'></p>
+			</li>
+		</ul>
+	</div>
+	<footer>
+		<p>Copyright 2019 News</p>
+	</footer>
+</body>
+
+</html>
+
+site=self._crime.find('div', {'class': 'row'})
+assert site.find('img', {'src': 'image/fight.png'})
+assert 2 == len(site.find_all('ul'))
+for ul in site.find_all('ul'):
+assert 4 == len(ul.find_all('li'))
+for li in ul.find_all('li'):
+assert li.find('b')
+assert li.find('a')
+assert li.find('p', {'class': 'grey'})
